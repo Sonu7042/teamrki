@@ -188,9 +188,19 @@
   <main class="main__content_wrapper">
     <!-- Breadcrumb section -->
 
-    <section class="propertie_img_banner">
-      <img src="./assets/images/banner/GurugramNow.png" loading="lazy" alt="" />
-    </section>
+  <div class="about-hero-imgtext">
+      <picture>
+        <!-- Mobile 425px and below: test_2.jpg -->
+        <source media="(max-width: 426px)"
+          srcset="https://res.cloudinary.com/dcqa35nax/image/upload/v1761911729/banner-blog-8-425_vtjurb.png ">
+        <!-- Tablet/Desktop 426px and up: test_1.jpg -->
+        <img src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761911732/banner-blog-8-1440_umwfqq.png "
+          alt="About us background" class="about-hero-img" loading="lazy" />
+      </picture>
+      <div class="about-hero-text">
+        Eco-Friendly
+      </div>
+    </div>
     <!-- Breadcrumb section .\ -->
 
 
@@ -299,7 +309,7 @@
         </div>
         <!-- Right Side Fixed Image -->
         <div class="blog-image">
-          <img loading="lazy" src="assets/images/blogs/forth-blog-side-image.png" alt="Gurugram Green Building" />
+          <img loading="lazy" src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761912003/blog-8-inner_ffqk07.png " alt="Gurugram Green Building" />
         </div>
       </div>
       <!-- Conclusion -->

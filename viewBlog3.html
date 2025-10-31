@@ -188,9 +188,21 @@
   <main class="main__content_wrapper">
     <!-- Breadcrumb section -->
 
-    <section class="propertie_img_banner">
-      <img src="./assets/images/banner/StudioRise.png" loading="lazy" alt="" />
-    </section>
+    
+
+    <div class="about-hero-imgtext">
+      <picture>
+        <!-- Mobile 425px and below: test_2.jpg -->
+        <source media="(max-width: 426px)"
+          srcset="https://res.cloudinary.com/dcqa35nax/image/upload/v1761909134/banner-blog-3-425_rucw1l.png ">
+        <!-- Tablet/Desktop 426px and up: test_1.jpg -->
+        <img src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761909143/banner-blog-3-1440_mnb5p4.png "
+          alt="About us background" class="about-hero-img" loading="lazy" />
+      </picture>
+      <div class="about-hero-text">
+        Studio Apartments
+      </div>
+    </div>
     <!-- Breadcrumb section .\ -->
 
 
@@ -253,7 +265,7 @@
 
         <!-- Right Side Fixed Image -->
         <div class="blog-image">
-          <img src="assets/images/blogs/third-blog-side-image.png" alt="Gurugram Real Estate" />
+          <img src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761909453/blog-3-inner_ysr6pw.png " alt="Gurugram Real Estate" />
         </div>
       </div>
 

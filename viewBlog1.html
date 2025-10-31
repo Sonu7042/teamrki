@@ -187,9 +187,19 @@
   <main class="main__content_wrapper">
     <!-- Breadcrumb section -->
 
-    <section class="propertie_img_banner">
-      <img src="./assets/images/banner/RealVision.png" loading="lazy" alt="" />
-    </section>
+    <div class="about-hero-imgtext">
+      <picture>
+        <!-- Mobile 425px and below: test_2.jpg -->
+        <source media="(max-width: 426px)"
+          srcset="https://res.cloudinary.com/dcqa35nax/image/upload/v1761908964/banner-blog-1-425_zghd5t.png ">
+        <!-- Tablet/Desktop 426px and up: test_1.jpg -->
+        <img src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761909029/banner-blog-1-1440_pzmgst.png "
+          alt="About us background" class="about-hero-img" loading="lazy" />
+      </picture>
+      <div class="about-hero-text">
+        Evolving Real Estate
+      </div>
+    </div>
     <!-- Breadcrumb section .\ -->
 
 
@@ -242,7 +252,7 @@
 
         <!-- Right Side Fixed Image -->
         <div class="blog-image">
-          <img src="assets/images/blogs/first-blog-side-image.png" alt="Gurugram Real Estate" />
+          <img src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761909446/blog-1-inner_dcq2xp.png" alt="Gurugram Real Estate" />
         </div>
       </div>
 

@@ -14,8 +14,7 @@
   <!-- ======= All CSS Plugins here ======== -->
   <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css" />
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Nunito:wght@300;400;500;600;700&amp;display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Nunito:wght@300;400;500;600;700&amp;display=swap"
     rel="stylesheet" />
 
   <!-- Plugin css -->
@@ -114,12 +113,6 @@
             <!-- <a href="propertie-details.html" class="theme-btn">
                 Add Properties <i class="flaticon-home"></i>
               </a> -->
-            <div class="social-icon d-flex align-items-center">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
           </div>
         </div>
       </div>
@@ -191,9 +184,17 @@
   <main class="main__content_wrapper">
     <!-- Breadcrumb section -->
 
-    <section class="propertie_img_banner">
-      <img src="./assets/images/about/contact_2.png" loading="lazy" alt="" />
-    </section>
+    <div class="about-hero-imgtext">
+  <picture>
+    <!-- Mobile 425px and below: test_2.jpg -->
+    <source media="(max-width: 426px)" srcset="https://res.cloudinary.com/dcqa35nax/image/upload/v1761903835/banner-Blog-425_unyvuc.png ">
+    <!-- Tablet/Desktop 426px and up: test_1.jpg -->
+    <img src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761903860/banner-Blog-1440_fub4ia.png " alt="About us background" class="about-hero-img" loading="lazy" />
+  </picture>
+  <div class="about-hero-text">
+    Contact
+  </div>
+</div>
     <!-- Breadcrumb section .\ -->
 
     <!-- Contact page section -->
