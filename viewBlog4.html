@@ -188,9 +188,19 @@
   <main class="main__content_wrapper">
     <!-- Breadcrumb section -->
 
-    <section class="propertie_img_banner">
-      <img src="./assets/images/banner/Real_estate.png" loading="lazy" alt="" />
-    </section>
+     <div class="about-hero-imgtext">
+      <picture>
+        <!-- Mobile 425px and below: test_2.jpg -->
+        <source media="(max-width: 426px)"
+          srcset="https://res.cloudinary.com/dcqa35nax/image/upload/v1761909170/banner-blog-4-425_bponlx.png ">
+        <!-- Tablet/Desktop 426px and up: test_1.jpg -->
+        <img src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761909174/banner-blog-4-1440_lrrvgm.png "
+          alt="About us background" class="about-hero-img" loading="lazy" />
+      </picture>
+      <div class="about-hero-text">
+        Investments
+      </div>
+    </div>
     <!-- Breadcrumb section .\ -->
 
 
@@ -282,7 +292,7 @@
 
         <!-- Right Side Fixed Image -->
         <div class="blog-image">
-          <img src="assets/images/blogs/forth-blog-side-image.png" alt="Gurugram Real Estate" />
+          <img src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761909443/blog-4-inner_lou8vf.png " alt="Gurugram Real Estate" />
         </div>
       </div>
 

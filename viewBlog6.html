@@ -188,9 +188,19 @@
   <main class="main__content_wrapper">
     <!-- Breadcrumb section -->
 
-    <section class="propertie_img_banner">
-      <img src="./assets/images/banner/GurugramNow.png" loading="lazy" alt="" />
-    </section>
+   <div class="about-hero-imgtext">
+      <picture>
+        <!-- Mobile 425px and below: test_2.jpg -->
+        <source media="(max-width: 426px)"
+          srcset="https://res.cloudinary.com/dcqa35nax/image/upload/v1761911684/banner-blog-6-425_jcgy0d.png ">
+        <!-- Tablet/Desktop 426px and up: test_1.jpg -->
+        <img src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761911687/banner-blog-6-1440_ayytdd.png "
+          alt="About us background" class="about-hero-img" loading="lazy" />
+      </picture>
+      <div class="about-hero-text">
+        Better Returns
+      </div>
+    </div>
     <!-- Breadcrumb section .\ -->
     <section class="blog-section">
       <div class="blog-container">
@@ -293,7 +303,7 @@
         </div>
         <!-- Right Side Fixed Image -->
         <div class="blog-image">
-          <img loading="lazy" src="assets/images/blogs/second-blog.png" alt="Gurugram Real Estate" />
+          <img loading="lazy" src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761911998/blog-6-inner_n18ryl.png " alt="Gurugram Real Estate" />
         </div>
       </div>
       <!-- Conclusion -->

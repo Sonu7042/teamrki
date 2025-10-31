@@ -188,9 +188,19 @@
   <main class="main__content_wrapper">
     <!-- Breadcrumb section -->
 
-    <section class="propertie_img_banner">
-      <img src="./assets/images/banner/GurugramNow.png" loading="lazy" alt="" />
-    </section>
+    <div class="about-hero-imgtext">
+      <picture>
+        <!-- Mobile 425px and below: test_2.jpg -->
+        <source media="(max-width: 426px)"
+          srcset="https://res.cloudinary.com/dcqa35nax/image/upload/v1761903682/banner-About-us-425_vlfgbh.png ">
+        <!-- Tablet/Desktop 426px and up: test_1.jpg -->
+        <img src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761903132/banner-About-us-1440_sojqx6.png "
+          alt="About us background" class="about-hero-img" loading="lazy" />
+      </picture>
+      <div class="about-hero-text">
+        About us
+      </div>
+    </div>
     <!-- Breadcrumb section .\ -->
 
 

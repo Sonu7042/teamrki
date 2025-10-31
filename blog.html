@@ -188,9 +188,17 @@
   <main class="main__content_wrapper">
     <!-- Breadcrumb section -->
 
-    <section class="propertie_img_banner">
-      <img src="./assets/rki_asset/rki_newBanner/Blog.svg" loading="lazy" alt="" />
-    </section>
+  <div class="about-hero-imgtext">
+  <picture>
+    <!-- Mobile 425px and below: test_2.jpg -->
+    <source media="(max-width: 426px)" srcset="https://res.cloudinary.com/dcqa35nax/image/upload/v1761903835/banner-Blog-425_unyvuc.png">
+    <!-- Tablet/Desktop 426px and up: test_1.jpg -->
+    <img src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761903860/banner-Blog-1440_fub4ia.png " alt="About us background" class="about-hero-img" loading="lazy" />
+  </picture>
+  <div class="about-hero-text">
+    Blog
+  </div>
+</div>
     <!-- Breadcrumb section .\ -->
     <!--  -->
     <section class="blog_section">
@@ -284,7 +292,7 @@
     const blogs = [
       {
         S_no: 1,
-        imgSrc: "./assets/images/blogs/blog_1.png",
+        imgSrc: "https://res.cloudinary.com/dcqa35nax/image/upload/v1761907121/blog-1_bwanks.png",
         imgAlt: "Aerial view of Gurugram cityscape with high-rise buildings",
         heading: "The Evolving Real Estate Market in Gurugram",
         desc: "Gurugram has changed a lot over the last 15–20 years. I still remember when it was mostly open fields and a few small colonies. Today, it’s a buzzing city with high-rises, office hubs, malls, and modern townships. If you’re planning to buy a home or invest here, it helps to understand what’s driving this growth and why Gurugram remains so attractive.",
@@ -292,7 +300,7 @@
       },
       {
         S_no: 2,
-        imgSrc: "./assets/images/blogs/blog_2.png",
+        imgSrc: "https://res.cloudinary.com/dcqa35nax/image/upload/v1761907126/blog-2_jdyjdy.png ",
         imgAlt: "Indian family discussing real estate investment ideas at home",
         heading: "Why Investing in Real Estate Still Makes Sense",
         desc: "You know, when people ask me where to put their money, I usually hear about stocks, mutual funds, or even cryptocurrencies these days. And yes, those have their place. But every time, I end up saying the same thing: real estate is still one of the smartest bets you can make.",
@@ -300,7 +308,7 @@
       },
       {
         S_no: 3,
-        imgSrc: "./assets/images/blogs/blog_3.png",
+        imgSrc: "https://res.cloudinary.com/dcqa35nax/image/upload/v1761907130/blog-3_pkwz5y.png ",
         imgAlt: "Modern studio apartment interior in Gurugram",
         heading: "Studio Apartments – The New Urban Living Trend",
         desc: "Honestly, I never thought I’d see the day when so many people started looking for smaller homes. But here we are. Studio apartments have quietly become one of the most popular choices in Gurugram, especially among young professionals, newlyweds, and anyone moving to the city for work. And after seeing it firsthand with my clients, I get why.",
@@ -308,7 +316,7 @@
       },
       {
         S_no: 4,
-        imgSrc: "./assets/images/blogs/blog_4.png",
+        imgSrc: "https://res.cloudinary.com/dcqa35nax/image/upload/v1761907132/blog-4_rqwxcx.png ",
         imgAlt: "Indian couple reviewing real estate options on laptop",
         heading: "Smart Real Estate Investments: What to Look for Before You Buy",
         desc: "Real estate has always been one of the safest and most rewarding investment options in India. But with so many new projects, developers, and property types coming up, making the right choice takes more than just good timing — it takes awareness, patience, and smart planning.",
@@ -316,7 +324,7 @@
       },
       {
         S_no: 5,
-        imgSrc: "./assets/images/blogs/blog_4.png",
+        imgSrc: "https://res.cloudinary.com/dcqa35nax/image/upload/v1761907135/blog-5_mecndv.png ",
         imgAlt: "Indian couple reviewing real estate options on laptop",
         heading: "Checklist Before You Buy Your First Home",
         desc: "Buying your first home is a big step — one that’s equal parts exciting and nerve-wracking. You’re about to make one of the biggest financial decisions of your life, and it’s natural to feel a bit lost in the process. Between figuring out your budget, visiting projects, and dealing with paperwork, there’s a lot that goes into getting it right.",
@@ -324,7 +332,7 @@
       },
       {
         S_no: 6,
-        imgSrc: "./assets/images/blogs/blog_4.png",
+        imgSrc: "https://res.cloudinary.com/dcqa35nax/image/upload/v1761907138/blog-6_wmirjv.png ",
         imgAlt: "Indian couple reviewing real estate options on laptop",
         heading: "Real Estate vs. Other Investment Options: What Gives Better Returns?",
         desc: "Everyone wants their money to grow — that’s just common sense. But when it comes to choosing where to invest, most people get stuck. Some swear by the stock market, others prefer the safety of gold or fixed deposits. And then there are those who believe real estate is the best way to build long-term wealth.",
@@ -332,7 +340,7 @@
       },
       {
         S_no: 7,
-        imgSrc: "./assets/images/blogs/blog_4.png",
+        imgSrc: "https://res.cloudinary.com/dcqa35nax/image/upload/v1761907120/blog-7_xcy0mk.png ",
         imgAlt: "Modern Home Design Trends for 2025",
         heading: "Modern Home Design Trends for 2025",
         desc: "If there’s one thing we’ve all learned in the last few years, it’s that our homes shape the way we live — and feel. They’re no longer just a roof over our heads; they’ve become our offices, our cafés, our gyms, and sometimes even our little escapes from the world outside.",
@@ -340,7 +348,7 @@
       },
       {
         S_no: 8,
-        imgSrc: "./assets/images/blogs/blog_4.png",
+        imgSrc: "https://res.cloudinary.com/dcqa35nax/image/upload/v1761907124/blog-8_vkfrfo.png ",
         imgAlt: "Eco-Friendly Living: The Rise of Green Buildings",
         heading: "Eco-Friendly Living: The Rise of Green Buildings",
         desc: "Not too long ago, when people talked about their dream home, they mostly meant fancy interiors or a good location. Today, things are different. More and more homebuyers are asking one question: Is it sustainable?",
