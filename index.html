@@ -126,6 +126,7 @@
   </div>
   <div class="offcanvas__overlay"></div>
 
+
     <!-- Start header -->
     <header id="header-sticky" class="header-1 remove_homeBgColour">
       <div class="container-fluid">
@@ -1599,8 +1600,26 @@ Because with Team RKI, you don’t just find a house, you find a place to truly
       </a>
     </div>
 
-
     <!-- WHATSAPP FLOATING BUTTON -->
+
+
+    <!-- start chatboat -->
+    <div class="chatbot-container">
+    <!-- Floating Chat Icon -->
+    <div class="chatbot-icon" id="chatbotIcon">💬</div>
+
+    <!-- Chat Window -->
+    <div class="chatbot-window" id="chatbotWindow">
+      <div class="chatbot-header">
+        <h3>RKI Chatbot</h3>
+        <span id="closeChat">✖</span>
+      </div>
+      <div class="chatbot-body" id="chatBody"></div>
+    </div>
+  </div>
+
+     <!-- end chatboat -->
+
        
 
   <!-- All Script JS Plugins here  -->
@@ -1739,6 +1758,100 @@ Because with Team RKI, you don’t just find a house, you find a place to truly
   </script>
 
 
+
+<!-- chat boat js -->
+ <script>
+    const chatbotIcon = document.getElementById("chatbotIcon");
+    const chatbotWindow = document.getElementById("chatbotWindow");
+    const closeChat = document.getElementById("closeChat");
+    const chatBody = document.getElementById("chatBody");
+
+    // Data for chatbot options
+    const chatOptions = [
+      { text: "About Services", response: "We provide web design, development, and SEO optimization to grow your business." },
+      { text: "Get Free Quote", response: "You can get a free quote by visiting our Contact page or sharing your project details here." },
+      { text: "Help Choosing Plan", response: "Sure! Tell me your business size and goals, and I’ll recommend the best plan." },
+      { text: "Customer Reviews", response: "We have amazing client feedback! You can check the testimonials section on our homepage." },
+      { text: "Talk to Agent", response: "Connecting you to a live agent... Please wait a moment ⏳" }
+    ];
+
+    // Show & hide chatbot
+    chatbotIcon.addEventListener("click", () => {
+      chatbotWindow.style.display = "flex";
+      chatbotIcon.style.display = "none";
+      startChat();
+    });
+
+    closeChat.addEventListener("click", () => {
+      chatbotWindow.style.display = "none";
+      chatbotIcon.style.display = "block";
+      chatBody.innerHTML = "";
+    });
+
+    // Start chat
+    function startChat() {
+      addBotMessage("👋 Hi! I'm RKI. Welcome to our chat.", () => {
+        setTimeout(() => addBotMessage("How can I assist you today?", showOptions), 1000);
+      });
+    }
+
+    // Typing effect for bot messages
+    function addBotMessage(message, callback) {
+      const typing = document.createElement("div");
+      typing.classList.add("typing");
+      typing.textContent = "RKI is typing...";
+      chatBody.appendChild(typing);
+      chatBody.scrollTop = chatBody.scrollHeight;
+
+      setTimeout(() => {
+        typing.remove();
+        const botMsg = document.createElement("div");
+        botMsg.classList.add("bot-message");
+        botMsg.textContent = message;
+        chatBody.appendChild(botMsg);
+        chatBody.scrollTop = chatBody.scrollHeight;
+
+        if (callback) setTimeout(callback, 500);
+      }, 800 + message.length * 20);
+    }
+
+    // Add user message
+    function addUserMessage(text) {
+      const userMsg = document.createElement("div");
+      userMsg.classList.add("user-message");
+      userMsg.textContent = text;
+      chatBody.appendChild(userMsg);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+
+    // Show options
+    function showOptions() {
+      const optionsDiv = document.createElement("div");
+      optionsDiv.classList.add("options");
+
+      chatOptions.forEach(opt => {
+        const btn = document.createElement("button");
+        btn.classList.add("option-btn");
+        btn.textContent = opt.text;
+        btn.addEventListener("click", () => handleOption(opt, optionsDiv));
+        optionsDiv.appendChild(btn);
+      });
+
+      chatBody.appendChild(optionsDiv);
+      chatBody.scrollTop = chatBody.scrollHeight;
+      
+    }
+
+    // Handle option click
+    function handleOption(option, optionsDiv) {
+      addUserMessage(option.text);
+      optionsDiv.remove();
+      addBotMessage(option.response, () => {
+        setTimeout(showOptions, 1200); // Show other options again after reply
+      });
+    }
+  </script>
 
 
 
