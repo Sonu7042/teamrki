@@ -20754,3 +20754,8 @@ footer {
   }
 
 } */
+
+
+.custom-style{
+  transform: scale(1.5);
+}
