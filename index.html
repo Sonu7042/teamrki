@@ -998,19 +998,19 @@
 
   <script>
     // Dynamically load common
-    async function loadcommon() {
-      const load = async (id, file) => {
-        const res = await fetch(file);
-        const html = await res.text();
-        document.getElementById(id).innerHTML = html;
-      };
-      await Promise.all([
-        load("header-sticky", "common/header.html"),
-        load("Offcanvas_nav", "common/Offcanvas_nav.html"),
-        load("footer", "common/footer.html"),
-      ]);
-    }
-    loadcommon();
+    // async function loadcommon() {
+    //   const load = async (id, file) => {
+    //     const res = await fetch(file);
+    //     const html = await res.text();
+    //     document.getElementById(id).innerHTML = html;
+    //   };
+    //   await Promise.all([
+    //     load("header-sticky", "common/header.html"),
+    //     load("Offcanvas_nav", "common/Offcanvas_nav.html"),
+    //     load("footer", "common/footer.html"),
+    //   ]);
+    // }
+    // loadcommon();
   </script>
 
 
@@ -1047,9 +1047,8 @@
   <script loading="lazy" src="assetsSec/js/main.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> 
 
-
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="assets/js/script.js"></script>
 
 
@@ -1100,7 +1099,7 @@
   </script>
 
   <!-- Customscript js -->
-  <script loading="lazy" src="assets/js/script.js"></script>
+  <!-- <script loading="lazy" src="assets/js/script.js"></script> -->
 
   <script>
     const earthFrame = document.querySelector("#earthFrame iframe");
@@ -1216,7 +1215,7 @@
       chatBody.scrollTop = chatBody.scrollHeight;
     }
 
-
+ 
     // Show options
     function showOptions() {
       const optionsDiv = document.createElement("div");

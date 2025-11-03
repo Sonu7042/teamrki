@@ -1076,6 +1076,26 @@ buttons.forEach(btn => {
 
 
 
+
+
+// loading header and footer 
+ async function loadcommon() {
+      const load = async (id, file) => {
+        const res = await fetch(file);
+        const html = await res.text();
+        document.getElementById(id).innerHTML = html;
+      };
+      await Promise.all([
+        load("header-sticky", "common/header.html"),
+        load("Offcanvas_nav", "common/Offcanvas_nav.html"),
+        load("footer", "common/footer.html"),
+      ]);
+    }
+    loadcommon();
+
+
+
+
 // functionaliy for sending mail 
     (function(){
       emailjs.init("aWUg-cd1ayayTnDyk"); // Your Public Key
