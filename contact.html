@@ -59,8 +59,10 @@
   <div class="offcanvas__overlay"></div>
 
   <!-- Start header -->
-  <header id="header-sticky" class="header-1">
+  <header id="header-sticky " class="header-1">
+    <div class="container-fluid" id="header_load">
 
+    </div>
   </header>
   <!-- End header -->
 
@@ -74,8 +76,7 @@
           srcset="https://res.cloudinary.com/dcqa35nax/image/upload/v1761996441/banner-services-425_rhcwiv.png">
         <!-- Tablet/Desktop 426px and up: test_1.jpg -->
         <img src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761996508/banner-services-1440_jaiqg7.png"
-          alt="Team RKI Real Estate About Us banner background"   
-          class="about-hero-img"  loading="lazy" />
+          alt="Team RKI Real Estate About Us banner background" class="about-hero-img" loading="lazy" />
       </picture>
       <div class="about-hero-text">
         Contact
@@ -266,7 +267,7 @@
         document.getElementById(id).innerHTML = html;
       };
       await Promise.all([
-        load("header-sticky", "common/header.html"),
+        load("header_load", "common/header.html"),
         load("Offcanvas_nav", "common/Offcanvas_nav.html"),
         load("footer", "common/footer.html"),
       ]);

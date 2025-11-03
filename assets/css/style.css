@@ -20745,3 +20745,12 @@ footer {
         padding-bottom: 8.9rem !important;
     }
 }
+
+/* @media (min-width:1024px){
+  .main-video-section {
+      position: relative;
+      height: 101vh;
+      overflow: hidden;
+  }
+
+} */

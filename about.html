@@ -59,8 +59,10 @@
   <div class="offcanvas__overlay"></div>
 
   <!-- Start header -->
-  <header id="header-sticky" class="header-1">
+  <header id="header-sticky " class="header-1">
+    <div class="container-fluid" id="header_load">
 
+    </div>
   </header>
   <!-- End header -->
 
@@ -73,7 +75,7 @@
         <source media="(max-width: 426px)"
           srcset="https://res.cloudinary.com/dcqa35nax/image/upload/v1761903682/banner-About-us-425_vlfgbh.png ">
         <img src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761903132/banner-About-us-1440_sojqx6.png "
-           class="about-hero-img" alt="Team RKI Real Estate About Us banner background" loading="lazy" />
+          class="about-hero-img" alt="Team RKI Real Estate About Us banner background" loading="lazy" />
       </picture>
       <div class="about-hero-text">
         About Us
@@ -181,7 +183,9 @@
       <div class="about-card">
         <div class="about-flex">
           <!-- Image on the left -->
-          <img loading="lazy" src="assets/images/about/1.jpg" alt="Mr. Devender Tomar - Founder of Team RKI Real Estate with over 22 years of experience" class="rki-about__img">
+          <img loading="lazy" src="assets/images/about/1.jpg"
+            alt="Mr. Devender Tomar - Founder of Team RKI Real Estate with over 22 years of experience"
+            class="rki-about__img">
           <!-- Content on the right -->
           <div class="about-text">
             <h2 class="about-name">MR. DEVENDER TOMAR</h2>
@@ -223,7 +227,9 @@
               operational efficiency, boost revenue, and deliver exceptional customer experiences.
             </p>
           </div>
-          <img loading="lazy" src="assets/images/about/2.png" alt="Ms. Neeru Tomar - Founder & CFO of Team RKI Real Estate with 19 years of sales and e-commerce expertise" class="rki-about__img">
+          <img loading="lazy" src="assets/images/about/2.png"
+            alt="Ms. Neeru Tomar - Founder & CFO of Team RKI Real Estate with 19 years of sales and e-commerce expertise"
+            class="rki-about__img">
         </div>
       </div>
     </div>
@@ -233,7 +239,9 @@
       <div class="about-card">
         <div class="about-flex">
           <!-- Image on the left -->
-          <img loading="lazy" src="assets/images/about/3.0.png" alt="Mr. Saurabh Siddhartha Jha - Co-founder & CEO of Team RKI Real Estate known for marketing and logistics expertise" class="rki-about__img">
+          <img loading="lazy" src="assets/images/about/3.0.png"
+            alt="Mr. Saurabh Siddhartha Jha - Co-founder & CEO of Team RKI Real Estate known for marketing and logistics expertise"
+            class="rki-about__img">
           <!-- Content on the right -->
           <div class="about-text">
             <h2 class="about-name">MR. SAURABH SIDDHARTHA JHA</h2>
@@ -304,7 +312,7 @@
         document.getElementById(id).innerHTML = html;
       };
       await Promise.all([
-        load("header-sticky", "common/header.html"),
+        load("header_load", "common/header.html"),
         load("Offcanvas_nav", "common/Offcanvas_nav.html"),
         load("footer", "common/footer.html"),
       ]);

@@ -57,7 +57,11 @@
   <div class="offcanvas__overlay"></div>
 
   <!-- Start header -->
-  <header id="header-sticky" class="header-1"></header>
+<header id="header-sticky " class="header-1">
+    <div class="container-fluid" id="header_load">
+
+    </div>
+  </header>
   <!-- End header -->
 
   <main class="main__content_wrapper">
@@ -1213,7 +1217,7 @@
         document.getElementById(id).innerHTML = html;
       };
       await Promise.all([
-        load("header-sticky", "common/header.html"),
+        load("header_load", "common/header.html"),
         load("Offcanvas_nav", "common/Offcanvas_nav.html"),
         load("footer", "common/footer.html"),
       ]);
@@ -1279,7 +1283,7 @@
           "Elan 49 blends modern design with timeless elegance,offering a refined and unmatched living experience.",
         bedrooms: 3,
         bathrooms: 4,
-         image: "https://res.cloudinary.com/dcqa35nax/image/upload/v1762162527/elan_49_thmmsg.webp",
+        image: "https://res.cloudinary.com/dcqa35nax/image/upload/v1762162527/elan_49_thmmsg.webp",
         location: "Gurugram"
 
       },
@@ -1303,7 +1307,7 @@
           "Shapoorji Pallonji is a global organization building sustainable landmarks across engineering, real estate.",
         bedrooms: 3,
         bathrooms: 4,
-         image: "https://res.cloudinary.com/dcqa35nax/image/upload/v1762162548/poonawala_b5dnux.png",
+        image: "https://res.cloudinary.com/dcqa35nax/image/upload/v1762162548/poonawala_b5dnux.png",
 
         location: "Pune"
 
