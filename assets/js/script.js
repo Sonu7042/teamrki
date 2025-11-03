@@ -1085,6 +1085,7 @@ buttons.forEach(btn => {
     const successMsg = document.getElementById("successMsg");
 
     form.addEventListener("submit", function(e) {
+      console.log("this is a class")
       e.preventDefault();
 
       // console.log("helllo")
