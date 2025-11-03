@@ -72,7 +72,7 @@
           srcset="https://res.cloudinary.com/dcqa35nax/image/upload/v1761903901/banner-Services-425_drtyl9.png">
         <!-- Tablet/Desktop 426px and up: test_1.jpg -->
         <img src="https://res.cloudinary.com/dcqa35nax/image/upload/v1761904027/banner-Services-1440_vwolwh.png "
-          alt="About us background" class="about-hero-img" loading="lazy" />
+          alt="Team RKI Real Estate About Us banner background" class="about-hero-img" loading="lazy" />
       </picture>
       <div class="about-hero-text">
         Service
@@ -81,7 +81,7 @@
     <!-- Breadcrumb section .\ -->
 
 
-    <section class="service_section">
+    <section class="service_section" id="servicesContainer">
       <div class="container  about_section_content_padding">
         <div class="row">
           <div class="col-lg-12">
@@ -92,17 +92,13 @@
                   <p class="rki-about__desc ">At RKI Real‑Estate, we provide a full suite of real estate services
                     designed around your goals — whether you’re buying, selling, investing or managing a property. Our
                     commitment is to deliver clarity, confidence, and value every step of the way.</p>
-
                 </div>
-
-
               </div>
             </div>
           </div>
-
         </div>
       </div>
-      <div class="service_card">
+      <!-- <div class="service_card">
         <div class="service_card_img" style="background-image: url(./assets/rki_asset/serviceImg/img1.png);">
           <div class="service_card_overlay">
             <p>Property Sales & Leasing</p>
@@ -147,18 +143,14 @@
                   </span>
                   <span class="properties__amenities--text">Transparent pricing, documentation handling, negotiations,
                     and closing assistance
-
                   </span>
                 </li>
-
               </ul>
-
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Card 2 -->
       <div class="service_card">
         <div class="service_card_img" style="background-image: url(./assets/images/service/investment_colsuntent.jpg);">
           <div class="service_card_overlay">
@@ -497,8 +489,12 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
+
+
+    <!-- <section class="service_section" id="servicesContainer">
+    </section> -->
 
 
 
@@ -619,6 +615,139 @@
       ]);
     }
     loadcommon();
+  </script>
+
+
+
+
+
+  <script>
+
+    const services = [
+      {
+        img: './assets/rki_asset/serviceImg/img1.png',
+        title: 'Property Sales & Leasing',
+        imgAlt: 'Property Sales and Leasing service, residential and commercial real estate',
+        description: 'Looking to buy, sell or lease residential or commercial property? We make the process seamless.',
+        amenities: [
+          'Custom support tailored to your needs — first‑time buyer, investor, landlord or tenant',
+          'Local market insight and access to exclusive listings',
+          'Transparent pricing, documentation handling, negotiations, and closing assistance',
+        ],
+      },
+      {
+        img: './assets/images/service/investment_colsuntent.jpg',
+        title: 'Investment Consultation',
+        imgAlt: 'Real estate investment consultation with market research and portfolio structuring',
+        description: 'Navigate the complexities of real estate investment with clarity and confidence.',
+        amenities: [
+          'Market research and trend analysis',
+          'Risk assessment and portfolio structuring',
+          'Strategy development for capital growth, cash flow, and appreciation',
+          'Guidance for both new and seasoned investors',
+        ],
+      },
+      {
+        img: './assets/rki_asset/serviceImg/img4.png',
+        title: 'Property Valuation',
+        imgAlt: 'Accurate property valuation service based on market trends and recent sales data',
+        description: 'An accurate valuation is foundational to good decisions — whether you plan to sell, rent, or invest.',
+        amenities: [
+          'Data-driven valuations grounded in recent sales, market trends, and property condition',
+          'Transparent, trusted appraisal reports',
+          'Tailored to your specific goals: sale, lease, investment',
+        ],
+      },
+      {
+        img: 'https://res.cloudinary.com/dcqa35nax/image/upload/v1761914543/Services-inner-3_dbyvxj.png',
+        title: 'Expert Advice',
+        imgAlt: 'Expert real estate advice with market insights and strategic guidance',
+        description: 'Make informed real estate decisions with insights that come from experience. Our experts bring deep market understanding, strategic foresight, and practical knowledge to help you every step of the way.',
+        amenities: [
+          'Personalized consultation for property investment, buying, and selling',
+          'Guidance on market timing, location potential, and price negotiation',
+          'Support in legal documentation, taxation, and compliance',
+          'Reliable insights for both first-time buyers and seasoned investors',
+        ],
+      },
+      {
+        img: 'https://res.cloudinary.com/dcqa35nax/image/upload/v1761913702/Services-inner-2_fzbgbw.png',
+        title: 'Property Loan Assistance',
+        imgAlt: 'Property loan assistance services including home loans, balance transfers, and lender selection',
+
+        description: 'Simplify your property financing journey with our end-to-end loan support. From choosing the right lender to managing documentation, we make the process quick, transparent, and stress-free.',
+        amenities: [
+          'Assistance with home loans, balance transfers, and loan against property',
+          'Comparison of top bank and NBFC offers for best interest rates',
+          'Help with eligibility checks, paperwork, and application tracking',
+          'Expert guidance till final loan approval and disbursement',
+        ],
+      },
+      {
+        img: 'https://res.cloudinary.com/dcqa35nax/image/upload/v1761914544/Services-inner-4_sdhpha.png',
+        title: 'Property Sales & Liaisoning',
+        imgAlt: 'Property sales and liaisoning support for approvals, registrations, and government coordination',
+        description: 'Navigating real estate transactions and government approvals can be complex — we make it effortless. Our team offers complete sales and liaisoning support to ensure your property deals move smoothly and compliantly from start to finish.',
+        amenities: [
+          'Assistance with property sales, acquisitions, and due diligence',
+          'Coordination with authorities for approvals, NOCs, and documentation',
+          'End-to-end liaisoning for land conversion, title clearance, and registration',
+          'Seamless communication between developers, buyers, and government bodies',
+          'Expert handling to ensure transparency, speed, and legal compliance',
+        ],
+      },
+    ];
+
+    const container = document.getElementById('servicesContainer');
+
+    services.forEach(service => {
+      const card = document.createElement('div');
+      card.classList.add('service_card');
+
+      const imgDiv = document.createElement('div');
+      imgDiv.classList.add('service_card_img');
+      imgDiv.style.backgroundImage = `url(${service.img})`;
+
+      // const imgElement = document.createElement('img');
+      // imgElement.src = service.img;
+      // imgElement.alt = service.imgAlt || service.title;  // Use provided alt text or fallback to title
+      // imgElement.loading = 'lazy';
+
+      // imgDiv.appendChild(imgElement)
+
+      const overlay = document.createElement('div');
+      overlay.classList.add('service_card_overlay');
+      overlay.innerHTML = `<p>${service.title}</p>`;
+      imgDiv.appendChild(overlay);
+
+      const cardText = document.createElement('div');
+      cardText.classList.add('service_card_text');
+      cardText.innerHTML = `
+      <h2>${service.title}</h2>
+      <p>${service.description}</p>
+      <div class="listing__details--content__step properties__amenities mb-40">
+        <div class="properties__amenities--wrapper d-flex">
+          <ul class="properties__amenities--step">
+            ${service.amenities.map(amenity => `
+              <li class="properties__amenities--list d-flex align-items-center">
+                <span class="properties__amenities--mark__icon">
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.794 2.174C14.426 3.422 13.094 4.874 11.798 6.53C10.67 7.958 9.656 9.422 8.756 10.922C7.94 12.266 7.346 13.418 6.974 14.378C6.962 14.414 6.938 14.444 6.902 14.468C6.866 14.504 6.824 14.522 6.776 14.522C6.764 14.534 6.752 14.54 6.74 14.54C6.656 14.54 6.596 14.516 6.56 14.468L0.134 7.934C0.122 7.922 0.278 7.766 0.602 7.466C0.926 7.154 1.244 6.872 1.556 6.62C1.904 6.332 2.09 6.2 2.114 6.224L5.642 8.996C6.674 7.784 7.832 6.584 9.116 5.396C11.048 3.62 13.04 2.108 15.092 0.86C15.128 0.86 15.266 1.028 15.506 1.364L15.866 1.886C15.878 1.934 15.878 1.988 15.866 2.048C15.854 2.096 15.83 2.138 15.794 2.174Z" fill="currentColor"/>
+                  </svg>
+                </span>
+                <span class="properties__amenities--text">${amenity}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      </div>
+    `;
+
+      card.appendChild(imgDiv);
+      card.appendChild(cardText);
+      container.appendChild(card);
+    });
+
   </script>
 
   <!-- Font Awesome CDN -->
