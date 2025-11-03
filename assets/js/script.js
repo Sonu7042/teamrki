@@ -1,11 +1,3 @@
-/*
-  Template Name: NewVilla - Real Estate HTML Template
-  Author Name: Hook theme
-  Author URL: https://themeforest.net/user/hooktheme
-  Version: 1.0.0
-*/
-
-
 AOS.init({
   once: true,
   disable: function () {
@@ -99,22 +91,27 @@ function TopOffset(el) {
 }
 
 /* Header sticky activation */
-const headerStickyWrapper = document.querySelector("header");
-const headerStickyTarget = document.querySelector(".header__sticky");
+// const headerStickyWrapper = document.querySelector("header");
+// const headerStickyTarget = document.querySelector(".header__sticky");
 
-if (headerStickyTarget) {
-  let headerHeight = headerStickyWrapper.clientHeight;
-  window.addEventListener("scroll", function () {
-    let StickyTargetElement = TopOffset(headerStickyWrapper);
-    let TargetElementTopOffset = StickyTargetElement.top;
+// if (headerStickyTarget) {
+//   let headerHeight = headerStickyWrapper.clientHeight;
+//   window.addEventListener("scroll", function () {
+//     let StickyTargetElement = TopOffset(headerStickyWrapper);
+//     let TargetElementTopOffset = StickyTargetElement.top;
 
-    if (window.scrollY > TargetElementTopOffset) {
-      headerStickyTarget.classList.add("sticky");
-    } else {
-      headerStickyTarget.classList.remove("sticky");
-    }
-  });
-}
+//     if (window.scrollY > TargetElementTopOffset) {
+//       headerStickyTarget.classList.add("sticky");
+//     } else {
+//       headerStickyTarget.classList.remove("sticky");
+//     }
+//   });
+// }
+
+
+
+
+
 
 /* Scroll up activation */
 const scrollTop = document.getElementById("scroll__top");
@@ -1076,61 +1073,144 @@ buttons.forEach(btn => {
 
 
 
-// functionaliy for sending mail 
-    (function(){
-      emailjs.init("aWUg-cd1ayayTnDyk"); // Your Public Key
-    })();
+// // functionaliy for sending mail 
+// document.addEventListener("DOMContentLoaded", function() {
+//     (function(){
+//       emailjs.init("aWUg-cd1ayayTnDyk"); // Your Public Key
+//     })();
 
+//     const form = document.getElementById("contactForm");
+//     const successMsg = document.getElementById("successMsg");
+
+//     form.addEventListener("submit", function(e) {
+//       console.log("this is a class")
+//       e.preventDefault();
+
+//       // console.log("helllo")
+//       const name = document.getElementById("fullName").value.trim();
+//       const email = document.getElementById("email").value.trim();
+//       const phone = document.getElementById("phone").value.trim();
+
+//       // ✅ Validation for 10-digit number
+//       if (!/^\d{10}$/.test(phone)) {
+//         successMsg.innerText=""
+//         successMsg.style.display = "block";
+//         successMsg.style.color="red"
+//         successMsg.textContent="Please enter a valid 10-digit phone number"
+//         return;
+//       }
+
+//       const templateParams = {
+//         from_name: name,
+//         from_email: email,
+//         from_number: phone,
+//         to_name: "Team RKI",
+//         to_email:"teamrki@1234567890"
+//       };
+
+//       console.log(templateParams, "data")
+
+//       emailjs.send("service_2aphpxr", "template_rb4khe5", templateParams)
+//         .then(() => {
+//           successMsg.innerText=""
+//           successMsg.style.display = "block";
+//           successMsg.style.color="green"
+//           successMsg.textContent="✅ Message sent successfully!"
+
+//           form.reset();
+
+//           // Hide message after 3 seconds
+//           setTimeout(() => {
+//             successMsg.style.display = "none";
+//           }, 3000);
+//         })
+//         .catch((error) => {
+//           console.error("FAILED...", error);
+//           alert("Something went wrong, please try again later.");
+//         });
+//     });
+//     });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // ✅ Check every 200ms until contact form appears (useful if loaded dynamically)
+  const checkForm = setInterval(() => {
     const form = document.getElementById("contactForm");
-    const successMsg = document.getElementById("successMsg");
+    if (form) {
+      clearInterval(checkForm);
+      initContactForm(form);
+    }
+  }, 200);
+});
 
-    form.addEventListener("submit", function(e) {
-      console.log("this is a class")
-      e.preventDefault();
+function initContactForm(form) {
+  console.log("✅ Contact form initialized!");
 
-      // console.log("helllo")
-      const name = document.getElementById("fullName").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const phone = document.getElementById("phone").value.trim();
+  // ✅ Initialize EmailJS (replace with your public key)
+  (function () {
+    emailjs.init("aWUg-cd1ayayTnDyk");
+  })();
 
-      // ✅ Validation for 10-digit number
-      if (!/^\d{10}$/.test(phone)) {
-        successMsg.innerText=""
-        successMsg.style.display = "block";
-        successMsg.style.color="red"
-        successMsg.textContent="Please enter a valid 10-digit phone number"
-        return;
-      }
+  const successMsg = document.getElementById("successMsg");
 
-      const templateParams = {
-        from_name: name,
-        from_email: email,
-        from_number: phone,
-        to_name: "Team RKI",
-        to_email:"teamrki@1234567890"
-      };
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    console.log("this is a class");
 
-      console.log(templateParams, "data")
+    // ✅ Get form values
+    const name = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
 
-      emailjs.send("service_2aphpxr", "template_rb4khe5", templateParams)
-        .then(() => {
-          successMsg.innerText=""
-          successMsg.style.display = "block";
-          successMsg.style.color="green"
-          successMsg.textContent="✅ Message sent successfully!"
+    // ✅ Validation for empty fields
+    if (!name || !email || !phone) {
+      showMessage("Please fill all fields", "red");
+      return;
+    }
 
-          form.reset();
+    // ✅ Validation for valid 10-digit phone
+    if (!/^\d{10}$/.test(phone)) {
+      showMessage("Please enter a valid 10-digit phone number", "red");
+      return;
+    }
 
-          // Hide message after 3 seconds
-          setTimeout(() => {
-            successMsg.style.display = "none";
-          }, 3000);
-        })
-        .catch((error) => {
-          console.error("FAILED...", error);
-          alert("Something went wrong, please try again later.");
-        });
-    });
+    // ✅ Prepare EmailJS parameters
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      from_number: phone,
+      to_name: "Team RKI",
+      to_email: "teamrki@1234567890",
+    };
+
+    console.log("📤 Sending data:", templateParams);
+
+    // ✅ Send mail using EmailJS
+    emailjs
+      .send("service_2aphpxr", "template_rb4khe5", templateParams)
+      .then(() => {
+        showMessage("✅ Message sent successfully!", "green");
+        form.reset();
+
+        // Hide message after 3 seconds
+        setTimeout(() => {
+          successMsg.style.display = "none";
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error("❌ FAILED...", error);
+        showMessage("Something went wrong, please try again later.", "red");
+      });
+
+    // ✅ Helper to show messages
+    function showMessage(text, color) {
+      successMsg.innerText = text;
+      successMsg.style.color = color;
+      successMsg.style.display = "block";
+    }
+  });
+}
 
 
 
@@ -1138,6 +1218,43 @@ buttons.forEach(btn => {
 
 
 
+// document.addEventListener("DOMContentLoaded", async () => {
+//   async function loadcommon() {
+//     const load = async (id, file) => {
+//       try {
+//         const res = await fetch(file);
+//         if (!res.ok) throw new Error(`Failed to load ${file}`);
+//         const html = await res.text();
+//         document.getElementById(id).innerHTML = html;
+//       } catch (err) {
+//         console.error("❌ Load error:", err);
+//       }
+//     };
+
+//     await Promise.all([
+//       load("header-sticky", "common/header.html"),
+//       load("Offcanvas_nav", "common/Offcanvas_nav.html"),
+//       load("footer", "common/footer.html"),
+//     ]);
+//   }
+
+//   loadcommon();
+// });
+
+//  async function loadcommon() {
+//       const load = async (id, file) => {
+//         const res = await fetch(file);
+//         const html = await res.text();
+//         document.getElementById(id).innerHTML = html;
+//       };
+//       await Promise.all([
+//         load("header-sticky", "common/header.html"),
+//         load("Offcanvas_nav", "common/Offcanvas_nav.html"),
+//         load("footer", "common/footer.html"),
+//       ]);
+//     }
+    
+//     loadcommon();
 
 
 
