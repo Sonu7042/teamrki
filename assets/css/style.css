@@ -14655,7 +14655,7 @@ input[type="range"]::-moz-range-thumb {
 /* static css of social media  */
 .social-bar {
   position: fixed;
-  top: 50%;
+  top: 52%;
   right: 20px;
   transform: translateY(-50%);
   display: flex;
@@ -20736,4 +20736,12 @@ footer {
   .service_card_overlay p {
     display: none;
   }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .last_section_padding {
+        padding-top: 143px !important;
+        padding-bottom: 8.9rem !important;
+    }
 }
