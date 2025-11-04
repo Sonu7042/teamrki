@@ -20766,3 +20766,39 @@ footer {
     flex-direction: column-reverse !important;
   }
 }
+
+
+
+.popular__featured--link {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.popular__featured--link img {
+  width: 100%;
+  height: auto;              /* keeps image responsive */
+  display: block;
+  object-fit: cover;         /* maintains aspect ratio */
+}
+
+/* overlay that matches image height */
+.popular__featured--link::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0; */
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.62));
+  transition: 0.3s;
+  z-index: 9;
+  pointer-events: none; /* ensures overlay doesn’t block clicks */
+}
+
+
+
+.popular__featured--link img {
+    width: 100%;
+    height: 55vh;
+    display: block;
+    object-fit: cover;
+}
