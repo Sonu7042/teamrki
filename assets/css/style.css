@@ -20759,3 +20759,10 @@ footer {
 .custom-style{
   transform: scale(1.5);
 }
+
+
+@media (max-width: 768px) {
+  .maam_css {
+    flex-direction: column-reverse !important;
+  }
+}
