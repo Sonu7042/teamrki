@@ -105,6 +105,7 @@ body {
   margin: 0;
   font-size: 62.5%;
   padding: 0;
+  text-align: justify;
 }
 
 body {
@@ -20805,7 +20806,7 @@ footer {
 
 
 
-/* img, svg {
+ /* img, svg {
     vertical-align: middle;
     margin-bottom: 30px !important;
 } */
@@ -20818,10 +20819,25 @@ footer {
 
 
 
+
+.custom-padding-cities{
+  padding: 19px;
+}
+
+
+.custom-center_icons{
+  margin-bottom: 30px !important;
+}
+
+
 .listing__header {
-  
+    padding: 0.92rem 2rem;
     border: 1px solid var(--color-border);
-    margin-bottom: 2rem;
+    margin-bottom: 2.9rem;
     border-radius: 0.5rem;
-    padding: 0rem 2rem !important;
+}
+
+
+.text-aligin-normal_1{
+  text-align: left !important ;
 }
