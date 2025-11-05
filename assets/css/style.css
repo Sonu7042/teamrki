@@ -14358,8 +14358,8 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .resize_img {
-  width: 39rem !important;
-  height: 256px !important;
+  /* width: 39rem !important; */
+  /* height: 256px !important; */
 }
 
 /* about section */
@@ -14444,7 +14444,7 @@ input[type="range"]::-moz-range-thumb {
 /* property section css */
 .propertie_head_img {
   width: 50rem !important;
-  height: 256px !important;
+  /* height: 256px !important; */
 }
 
 .about-section-img-2 {
@@ -17666,7 +17666,7 @@ article #_boxes ul li figure a {
 }
 
 .blog_section_card:hover .card_img img {
-  transform: scale(1.05);
+  /* transform: scale(-1.05); */
 }
 
 /* Text Section */
@@ -20741,10 +20741,10 @@ footer {
 
 
 @media only screen and (min-width: 1200px) {
-    .last_section_padding {
-        padding-top: 143px !important;
-        padding-bottom: 8.9rem !important;
-    }
+  .last_section_padding {
+    padding-top: 143px !important;
+    padding-bottom: 8.9rem !important;
+  }
 }
 
 /* @media (min-width:1024px){
@@ -20757,7 +20757,7 @@ footer {
 } */
 
 
-.custom-style{
+.custom-style {
   transform: scale(1.5);
 }
 
@@ -20779,40 +20779,44 @@ footer {
 
 .popular__featured--link img {
   width: 100%;
-  height: auto;              /* keeps image responsive */
+  height: auto;
+  /* keeps image responsive */
   display: block;
-  object-fit: cover;         /* maintains aspect ratio */
+  object-fit: cover;
+  /* maintains aspect ratio */
 }
 
 /* overlay that matches image height */
 .popular__featured--link::before {
   content: "";
   position: absolute;
-  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0; */
+  inset: 0;
+  /* shorthand for top:0; right:0; bottom:0; left:0; */
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.62));
   transition: 0.3s;
   z-index: 9;
-  pointer-events: none; /* ensures overlay doesn’t block clicks */
+  pointer-events: none;
+  /* ensures overlay doesn’t block clicks */
 }
 
 
 
 .popular__featured--link img {
-    width: 100%;
-    height: 55vh;
-    display: block;
-    object-fit: cover;
+  width: 100%;
+  height: 55vh;
+  display: block;
+  object-fit: cover;
 }
 
 
 
- /* img, svg {
+/* img, svg {
     vertical-align: middle;
     margin-bottom: 30px !important;
 } */
 
 
-.about-desc{
+.about-desc {
   text-align: justify;
 }
 
@@ -20820,7 +20824,7 @@ footer {
 
 
 
-.custom-padding-cities{
+.custom-padding-cities {
   padding: 19px;
 }
 
@@ -20831,15 +20835,132 @@ footer {
 
 
 .listing__header {
-    padding: 0.92rem 2rem;
-    border: 1px solid var(--color-border);
-    margin-bottom: 2.9rem;
-    border-radius: 0.5rem;
+  padding: 0.92rem 2rem;
+  border: 1px solid var(--color-border);
+  margin-bottom: 2.9rem;
+  border-radius: 0.5rem;
 }
 
 
-.text-aligin-normal_1{
-  text-align: left !important ;
+.text-aligin-normal_1 {
+  text-align: left !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* Container uses flex to align cards evenly */
+.featured__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Bootstrap columns need full height for equal sizing */
+.featured__wrapper>[class*="col-"] {
+  display: flex;
+}
+
+/* Card styling */
+.featured__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* Thumbnail adjusts automatically */
+.featured__thumbnail {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;  
+  height: 225px;
+}
+
+/* Image equal height */
+.featured__thumbnail img {
+  width: 100vw !important;
+  /* height: 250px !important; */
+  /* Desktop height */
+  object-fit: cover !important;
+  /* Prevent stretch */
+  object-position: center !important;
+  display: block;
+  border-radius: 16px 16px 0 0;
+}
+
+/* Card content fills the rest */
+.featured__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Button at the bottom */
+.featured__card .view-btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .featured__thumbnail img {
+    height: 220px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .featured__wrapper {
+    gap: 20px;
+  }
+
+  .featured__thumbnail img {
+    height: 200px !important;
+  }
+}
+
+
+
+#cityImage {
+  width: 100vw;
+  height: 400px;
+}
+
+.custom_heightCities{
+  height: 267px;
+}
+
+
+
+
+
+.featured__thumbnail img {
+    width: 100vw !important;
+    /* height: 250px !important; */
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block;
+    border-radius: 16px 16px 0 0;
+}
+
+.resize_img {
+    width: 39rem !important;
+    /* height: 256px !important; */
 }
 
 
@@ -21453,3 +21574,6 @@ footer {
     font-size: 14px;
   }
 }
+
+
+
