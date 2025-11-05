@@ -20944,9 +20944,6 @@ footer {
 }
 
 
-
-
-
 .featured__thumbnail img {
     width: 100vw !important;
     /* height: 250px !important; */
@@ -20960,6 +20957,7 @@ footer {
     width: 39rem !important;
     /* height: 256px !important; */
 }
+
 
 
 .map_custom{
