@@ -20828,3 +20828,16 @@ footer {
 .custom-center_icons{
   margin-bottom: 30px !important;
 }
+
+
+.listing__header {
+    padding: 0.92rem 2rem;
+    border: 1px solid var(--color-border);
+    margin-bottom: 2.9rem;
+    border-radius: 0.5rem;
+}
+
+
+.text-aligin-normal_1{
+  text-align: left !important ;
+}
