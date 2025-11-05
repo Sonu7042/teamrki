@@ -20805,10 +20805,10 @@ footer {
 
 
 
-img, svg {
+/* img, svg {
     vertical-align: middle;
     margin-bottom: 30px !important;
-}
+} */
 
 
 .about-desc{
@@ -20819,7 +20819,7 @@ img, svg {
 
 
 .listing__header {
-    /* padding: 2rem; */
+  
     border: 1px solid var(--color-border);
     margin-bottom: 2rem;
     border-radius: 0.5rem;
