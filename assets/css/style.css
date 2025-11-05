@@ -12079,7 +12079,7 @@ input[type="range"]::-moz-range-thumb {
 
 @media only screen and (min-width: 576px) {
   .properties__amenities--list {
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -17313,7 +17313,7 @@ article #_boxes ul li figure a {
 /* Text Area */
 .service_card_text {
   flex: 1;
-  padding: 40px;
+  padding: 5px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21648,5 +21648,50 @@ footer {
     .video-wrap video {
         height: auto;
         padding-top: 56px;
+    }
+}
+
+
+@media (min-width:1300px){
+  .service_card{
+  height: 308px;
+  }
+
+
+  .service_card_text h2 {
+    margin-bottom: -11px;
+    font-size: 22px;
+    color: #333;
+}
+.service_card_text p {
+    color: #555;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.service_card_text p {
+  margin-bottom: 10px;
+}
+
+    .service_card_text h2 {
+        margin-bottom: -2px;
+        font-size: 22px;
+        color: #333;
+    }
+
+
+        .service_margin_top {
+        margin-bottom: -2px;
+        font-size: 22px;
+        color: #333;
+        margin-top: 39px;
+    }
+
+}
+
+
+@media only screen and (min-width: 576px) {
+    .properties__amenities--list {
+        margin-bottom: 0rem;
     }
 }
