@@ -1054,20 +1054,20 @@ if(countryList.length > 0){
 
 
 // logic for map video
-const videoFrame = document.getElementById("heroVideo");
-const buttons = document.querySelectorAll(".map-buttons button");
+// const videoFrame = document.getElementById("heroVideo");
+// const buttons = document.querySelectorAll(".map-buttons button");
 
-// Handle button clicks for switching videos
-buttons.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const videoSrc = btn.getAttribute("data-video");
-    videoFrame.style.opacity = "0"; // fade out
-    setTimeout(() => {
-      videoFrame.src = videoSrc;
-      videoFrame.style.opacity = "1"; // fade in
-    }, 600);
-  });
-});
+// // Handle button clicks for switching videos
+// buttons.forEach(btn => {
+//   btn.addEventListener("click", () => {
+//     const videoSrc = btn.getAttribute("data-video");
+//     videoFrame.style.opacity = "0"; // fade out
+//     setTimeout(() => {
+//       videoFrame.src = videoSrc;
+//       videoFrame.style.opacity = "1"; // fade in
+//     }, 600);
+//   });
+// });
 
 
 

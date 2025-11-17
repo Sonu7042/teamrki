@@ -1043,28 +1043,7 @@
     </section>
 
 
-    <script>
-      const heroImage = document.getElementById("heroImage");
-      const heroVideo = document.getElementById("heroVideo");
-      const buttons = document.querySelectorAll(".map-buttons button");
-
-      buttons.forEach(button => {
-        button.addEventListener("click", () => {
-          const videoSrc = button.getAttribute("data-video");
-
-          // Set video source
-          heroVideo.src = videoSrc;
-
-          // Show video / Hide default image
-          heroImage.style.display = "none";
-          heroVideo.style.display = "block";
-
-          // Play video
-          heroVideo.currentTime = 0;
-          heroVideo.play();
-        });
-      });
-    </script>
+    
 
 
     <!-- location video end -->
@@ -1397,7 +1376,28 @@
   </script>
 
 
+<script>
+      const heroImage = document.getElementById("heroImage");
+      const heroVideo = document.getElementById("heroVideo");
+      const buttons = document.querySelectorAll(".map-buttons button");
 
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          const videoSrc = button.getAttribute("data-video");
+
+          // Set video source
+          heroVideo.src = videoSrc;
+
+          // Show video / Hide default image
+          heroImage.style.display = "none";
+          heroVideo.style.display = "block";
+
+          // Play video
+          heroVideo.currentTime = 0;
+          heroVideo.play();
+        });
+      });
+    </script>
 </body>
 
 </html>
